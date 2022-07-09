@@ -28,7 +28,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   //   the filtered image file [!!TIP res.sendFile(filteredpath); might be useful]
 
   /**************************************************************************** */
-  app.get("filteredimage", async ( req, res ) => {
+  app.get("/filteredimage", async ( req, res ) => {
     const image_url = req.query.image_url.toString();
     if(!image_url) {
       res.status(401).send("Image url cannot be blank");
